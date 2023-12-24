@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Greeting</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #greeting {
+      font-size: 24px;
+    }
+
+    #changeGreetingBtn {
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .changed {
+      color: orange;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="greeting">Merry Christmas</div>
+  <button id="changeGreetingBtn">Click here for gifts</button>
+
+  <script>
+    var greetingElement = document.getElementById('greeting');
+    var changeGreetingBtn = document.getElementById('changeGreetingBtn');
+
+    changeGreetingBtn.addEventListener('click', function() {
+      greetingElement.textContent = 'Jai Shree Ram';
+      greetingElement.classList.add('changed');
+    });
+  </script>
+</body>
+</html>
